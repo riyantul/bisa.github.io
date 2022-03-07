@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Rakitan</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		body{
+			height: 2000px;margin: 0px;padding: 0px;
+		}.bl{
+			height: 200px;
+		}
+		.menu{
+			height: 50px;
+			background: #001b6a;
+			width: 100%;
+		}.fx{
+			top: 0px;
+			position: fixed;
+		}.d-flex{
+			display: flex;
+			height: 100%;
+		}.menu a{
+			margin-right: 20px;
+			margin-bottom: auto;
+			margin-top: auto;
+			color: white;
+			font-family: sans-serif;
+		}.m-auto{
+			margin: auto;
+		}h1{
+			font-size: 83px;
+			font-family: sans-serif;
+		}
+	</style>
+</head>
+<body >
+<div class="bl">
+	<div class="d-flex">
+		<h1 class="m-auto">Coding Rakitan</h1>
+	</div>
+</div>
+<div class="menu" id="menu">
+	<div class="d-flex">
+		<a>Menu 1</a>
+		<a>Menu 2</a>
+		<a>Menu 3</a>
+		<a>Menu 4</a>
+	</div>
+</div>
+<br>
+<div class="d-flex">
+	
+	<img class="m-auto" style="margin-top: 0px;" src="https://1.bp.blogspot.com/-EICGWCsAdt0/X14oFnUYi5I/AAAAAAAADuo/AsdycoKUhwQF9SMo-9Tp0XhcDE0YH-OlQCPcBGAYYCw/s2518/Screenshot_2020-09-13%2BCODING%2BRAKITAN%2BINSPIRASI%2BCODING%2BTERUPDATE%2Bandroid%2Bstudio%2Blaravel%2Bphp.png" style="width: 700px;">
+</div>
+</body>
+<script type="text/javascript">
+	$(function(){
+
+	  var menu = $('#menu');
+	  pos = menu.offset();
+
+	  $(window).scroll(function(){
+	   if($(this).scrollTop() > pos.top+menu.height()){
+		    menu.addClass('fx');
+	   } else if($(this).scrollTop() <= pos.top ){
+	    	menu.removeClass('fx');
+	   }
+	  });
+
+});
+</script>
+</html>
